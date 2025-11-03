@@ -1,0 +1,1 @@
+import React from "react"; import BracketEditor from "../components/BracketEditor"; import Login from "../components/Login"; import { AuthProvider, useAuth } from "../components/AuthContext"; function App() { const { isAuthenticated } = useAuth(); return <div>{isAuthenticated ? <BracketEditor /> : <Login />}</div>; } export default () => <AuthProvider><App /></AuthProvider>;

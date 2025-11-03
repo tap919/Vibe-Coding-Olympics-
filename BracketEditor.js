@@ -1,0 +1,1 @@
+import React from "react"; import { useAuth } from "./AuthContext"; const BracketEditor = () => { const { role } = useAuth(); return <div>Welcome {role}, you can edit brackets here.</div>; }; export default BracketEditor;

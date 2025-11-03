@@ -1,2 +1,2 @@
-# Vibe-Coding-Olympics-
-Tournament style vibe coding contests with $25000 prize
+# Bracket Editor
+UI for managing tournament brackets.
