@@ -26,6 +26,13 @@ export const metadata: Metadata = {
     description: "The ultimate competition for vibe coders worldwide",
     images: ["/og-image.jpg"],
   },
+import { ClerkProvider } from "@clerk/nextjs";
+import "./globals.css";
+import { QueryProvider } from "@/components/QueryProvider";
+
+export const metadata: Metadata = {
+  title: "Vibe Coding Olympics",
+  description: "The most aesthetic coding competition on Earth",
 };
 
 export default function RootLayout({
@@ -37,5 +44,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="font-sans antialiased">{children}</body>
     </html>
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <ClerkProvider>
+      <html lang="en" className="scroll-smooth">
+        <body className="min-h-screen font-sans">
+          <QueryProvider>{children}</QueryProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
