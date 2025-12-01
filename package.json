@@ -1,1 +1,25 @@
-{ "name": "bracket-editor", "version": "1.0.0", "dependencies": { "react": "^18.2.0", "react-dom": "^18.2.0", "react-beautiful-dnd": "^13.1.0", "tailwindcss": "^3.3.2" } }
+{
+  "name": "vibe-coding-olympics",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.294.0",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}
