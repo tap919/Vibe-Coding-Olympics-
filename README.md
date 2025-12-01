@@ -38,3 +38,17 @@ Only users with `@vibeolympics.com` email addresses can access the admin panel.
 - Supabase (Auth + Database)
 - Tailwind CSS
 - Lucide Icons
+# Vibe Coding Olympics
+
+One-command deploy. Already looks insane.
+
+```bash
+npm install
+cp .env.example .env.local
+# Add your Supabase + Clerk keys
+npm run dev
+```
+
+Deploy → Vercel (zero config)
+
+You're live. Go win the internet.
