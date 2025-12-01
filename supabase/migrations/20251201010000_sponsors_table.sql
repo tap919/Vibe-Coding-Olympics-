@@ -10,4 +10,4 @@ create table sponsors (
 );
 
 alter table sponsors enable row level security;
-create policy "Admin only" on sponsors for all using (auth.email() like '%@vibeolympics.com');
+create policy "Admin only" on sponsors for all using (auth.email() ~ '@vibeolympics\.com$');

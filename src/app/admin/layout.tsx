@@ -1,10 +1,14 @@
 import { redirect } from "next/navigation";
-import { supabaseAdmin } from "@/lib/supabase";
+import { cookies } from "next/headers";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
 export const metadata = { title: "Admin • Vibe Coding Olympics" };
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
-  const { data: { user } } = await supabaseAdmin!.auth.getUser();
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  
+  const { data: { user } } = await supabase.auth.getUser();
   if (!user || !user.email?.endsWith("@vibeolympics.com")) {
     redirect("/");
   }

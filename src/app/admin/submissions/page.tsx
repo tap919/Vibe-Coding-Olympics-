@@ -25,7 +25,7 @@ export default async function AdminSubmissions() {
           <div key={s.id} className="bg-white/5 border border-white/10 rounded-xl p-6 flex items-center justify-between">
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-vibe-purple">{s.title}</h3>
-              <p className="text-gray-400">by {s.user_id.slice(0,8)} • Season: {s.season?.name || 'N/A'}</p>
+              <p className="text-gray-400">by {s.user_id?.slice(0,8) || 'Unknown'} • Season: {s.season?.name || 'N/A'}</p>
               <div className="mt-3 flex gap-4">
                 {s.video_url && <a href={s.video_url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">Video</a>}
                 {s.github_url && <a href={s.github_url} target="_blank" rel="noopener noreferrer" className="text-pink-400 underline">GitHub</a>}
